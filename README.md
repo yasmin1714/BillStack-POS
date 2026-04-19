@@ -4,6 +4,21 @@ BillStack is an advanced Android-based Point-of-Sale (POS) application engineere
 
 ---
 
+## Platform View
+### 1. Create Product
+<img src="./resources/Create-Product.jpg" width="20%" alt="Mobile Screenshot">
+
+### 2. Generate Bills
+<img src="./resources/Generate-Bill.jpg" width="20%" alt="Mobile Screenshot">
+
+### 3. View Bills
+<img src="./resources/View-Bills.jpg" width="20%" alt="Mobile Screenshot">
+
+### 4. View Products
+<img src="./resources/View-Products.jpg" width="20%" alt="Mobile Screenshot">
+
+---
+
 ## 1. Technical Architecture
 
 The application is built on the **MVVM (Model-View-ViewModel)** design pattern, ensuring a strict separation of concerns, high maintainability, and testability.
@@ -19,7 +34,7 @@ The application is built on the **MVVM (Model-View-ViewModel)** design pattern, 
 
 | Component | Specification |
 | :--- | :--- |
-| **Language** | Kotlin 1.9+ |
+| **Language** | Kotlin 1.8+ |
 | **Minimum SDK** | API 24 (Android 7.0) |
 | **Computer Vision** | Google ML Kit (Barcode Scanning SDK) |
 | **Camera Framework** | CameraX (Lifecycle-aware) |
@@ -90,7 +105,144 @@ The system employs a custom `BarcodeAnalyzer` class implementing the `ImageAnaly
 
 ---
 
-## 7. Future Scope
+## 7. Functional Modules
+
+### 7.1 Product Management Module
+- Scan barcode to identify product
+- Enter product details:
+  - Name
+  - Price
+  - Description
+- Store in local database
+
+---
+
+### 7.2 Billing Module
+- Scan products sequentially
+- Fetch product details automatically
+- Add items to billing list
+- Calculate total amount
+
+---
+
+### 7.3 Product Dashboard
+- Display all stored products
+- Edit product details
+- Delete products
+- Search functionality
+
+---
+
+### 7.4 Billing History Module
+- Store completed bills
+- Display past transactions
+- View bill details (items, total, date)
+
+---
+
+## 8. Activity Diagram (Logical Flow)
+
+### 8.1 Create Product Activity
+```
+
+Start
+↓
+Open Camera
+↓
+Scan Barcode
+↓
+Enter Product Details
+↓
+Save to Database
+↓
+End
+
+```
+
+---
+
+### 8.2 Generate Bill Activity
+```
+
+Start
+↓
+Scan Product
+↓
+Fetch Product Data
+↓
+Add to Cart
+↓
+Repeat Scan (Loop)
+↓
+Calculate Total
+↓
+Save Bill
+↓
+End
+
+```
+
+---
+
+### 8.3 Product Dashboard Activity
+```
+
+Start
+↓
+Fetch Products
+↓
+Display List
+↓
+Select Product
+↓
+Edit/Delete
+↓
+Update Database
+↓
+End
+
+```
+
+---
+
+### 8.4 Billing History Activity
+```
+
+Start
+↓
+Fetch Bills
+↓
+Display List
+↓
+Select Bill
+↓
+View Details
+↓
+End
+
+```
+
+---
+
+## 9. UI Blueprint
+
+### Home Screen
+- Create Product
+- Generate Bill
+- Product Dashboard
+- Billing History
+
+---
+## 10. Non-Functional Requirements
+
+- **Performance:** Fast barcode scanning (<1 second)
+- **Usability:** Simple UI for non-technical users
+- **Reliability:** Offline functionality
+- **Scalability:** Modular architecture for future upgrades
+- **Maintainability:** Clean code with MVVM pattern
+---
+
+## 11. Future Scope
 * **Relational Normalization:** Transitioning CSV storage to a dedicated `Bill_Items` table for deeper analytics.
 * **Export Subsystem:** Implementing PDF/Excel export modules for fiscal compliance.
 * **Hybrid Synchronization:** Implementing WorkManager for periodic background syncing with remote cloud storage.
