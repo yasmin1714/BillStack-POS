@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".CreateProduct">
+
+    <TextView
+        android:id="@+id/create_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/CreateProduct"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_product" />
+
+    <TableLayout
+        android:id="@+id/productTable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:stretchColumns="1"
+        app:barrierMargin="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/previewView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oxygen"
+                android:text="@string/product_id"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/product_barcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/oxygen"
+                android:text="@string/scan_a_barcode"
+                android:textColor="#222222"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow android:paddingVertical="8dp">
+
+            <TextView
+                android:fontFamily="@font/oxygen"
+                android:text="@string/name"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/product_name"
+                android:layout_marginStart="16dp"
+                android:autofillHints=""
+                android:fontFamily="@font/oxygen"
+                android:hint="@string/p_name"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="LabelFor" />
+        </TableRow>
+
+        <TableRow android:paddingVertical="8dp">
+
+            <TextView
+                android:fontFamily="@font/oxygen"
+                android:text="@string/product_price"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/product_price"
+                android:layout_marginStart="16dp"
+                android:autofillHints=""
+                android:fontFamily="@font/oxygen"
+                android:hint="@string/price"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757575"
+                android:textSize="16sp"
+                tools:ignore="LabelFor,VisualLintTextFieldSize" />
+        </TableRow>
+
+        <TableRow android:paddingVertical="8dp">
+
+            <TextView
+                android:autofillHints=""
+                android:fontFamily="@font/oxygen"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/product_description"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <EditText
+                android:id="@+id/product_desc"
+                android:layout_marginStart="16dp"
+                android:autofillHints=""
+                android:fontFamily="@font/oxygen"
+                android:hint="@string/description"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757575"
+                android:textSize="16sp"
+                tools:ignore="LabelFor,VisualLintTextFieldSize" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="8dp">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/oxygen"
+                android:text="@string/CreateProduct"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/black"
+                app:cornerRadius="0dp"
+                app:elevation="0dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

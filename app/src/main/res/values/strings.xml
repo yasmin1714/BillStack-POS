@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">BillStack</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="billstack">BillStack</string>
+    <string name="create_product">Create Product</string>
+    <string name="generate_bill">Generate Bill</string>
+    <string name="billing_archive">Billing Archive</string>
+    <string name="product_warehouse">Product Warehouse</string>
+    <string name="button">Button</string>
+    <string name="todo">TODO</string>
+    <string name="activities">BillStack - Activities</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="CreateProduct">Create Product</string>
+    <string name="ViewBills">View Bills</string>
+    <string name="ViewProducts">View Products</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="alerts">Alerts</string>
+    <string name="profile">Profile</string>
+    <string name="billstack_main">BillStack</string>
+    <string name="scan_a_barcode">Scan a barcode</string>
+    <string name="product_id">Product ID</string>
+    <string name="name">Product Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="product_description">Product Description</string>
+    <string name="p_name">Name</string>
+    <string name="all_products">All Products</string>
+    <string name="no_products_found">No products found.</string>
+    <string name="add_product">Add Product</string>
+    <string name="scanned_id">Scanned ID</string>
+    <string name="save_product">Save Product</string>
+    <string name="save_bill">Save Bill</string>
+</resources>

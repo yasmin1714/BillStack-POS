@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CreateProduct">
+
+    <fragment
+        android:id="@+id/CreateProduct"
+        android:name="com.example.billstack.CreateProduct"
+        android:label="@string/CreateProduct"
+        tools:layout="@layout/fragment_create_product"/>
+    <fragment
+        android:id="@+id/GenerateBills"
+        android:name="com.example.billstack.GenerateBills"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_generate_bills"/>
+    <fragment
+        android:id="@+id/ViewBills"
+        android:name="com.example.billstack.ViewBills"
+        android:label="@string/ViewBills"
+        tools:layout="@layout/fragment_view_bills"/>
+    <fragment
+        android:id="@+id/ViewProducts"
+        android:name="com.example.billstack.ViewProducts"
+        android:label="@string/ViewProducts"
+        tools:layout="@layout/fragment_view_bills"/>
+
+</navigation>

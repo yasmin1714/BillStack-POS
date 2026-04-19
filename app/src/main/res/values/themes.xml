@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.BillStack" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+
+        <item name="colorPrimary">#444444</item> <item name="colorOnSurface">#1C1B1F</item> <item name="colorSecondaryContainer">@android:color/transparent</item>
+        <item name="colorOnSecondaryContainer">#444444</item>
+
+        <item name="colorOutlineVariant">#EEEEEE</item>
+    </style>
+
+    <style name="Theme.BillStack" parent="Base.Theme.BillStack" />
+</resources>

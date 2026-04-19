@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/CreateProduct"
+        android:icon="@drawable/outline_add_24"
+        android:title="@string/CreateProduct" />
+
+    <item
+        android:id="@+id/GenerateBills"
+        android:icon="@drawable/outline_barcode_scanner_24"
+        android:title="@string/generate_bill" />
+
+    <item
+        android:id="@+id/ViewBills"
+        android:icon="@drawable/outline_bookmark_star_24"
+        android:title="@string/ViewBills" />
+
+    <item
+        android:id="@+id/ViewProducts"
+        android:icon="@drawable/outline_account_balance_wallet_24"
+        android:title="@string/ViewProducts" />
+
+</menu>
