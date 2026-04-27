@@ -2,6 +2,8 @@
 
 BillStack is an advanced Android-based Point-of-Sale (POS) application engineered to optimize inventory management and billing workflows for small-to-medium scale retailers. By integrating computer vision with a robust offline-first architecture, the system mitigates manual entry errors and accelerates transaction throughput.
 
+### Demo: https://www.youtube.com/watch?v=mgRs5nfLK6k
+ 
 ---
 
 ## Platform View
